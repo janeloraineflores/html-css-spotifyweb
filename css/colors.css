@@ -1,0 +1,41 @@
+/* COLORS */
+
+:root{
+    --first-color: black;
+    --second-color: white;
+    --third-color: lightgrey;
+    --fourth-color: rgb(28, 28, 76);
+
+}
+
+.first-color-text{
+    color: var(--first-color);
+}
+
+.first-color-bg{
+    background-color: var(--first-color);
+}
+
+.second-color-text{
+    color: var(--second-color);
+}
+
+.second-color-bg{
+    background-color: var(--second-color);
+}
+
+.third-color-text{
+    color: var(--third-color);
+}
+
+.third-color-bg{
+    background-color: var(--third-color);
+}
+
+.fourth-color-text{
+    color: var(--fourth-color);
+}
+
+.fourth-color-bg{
+    background-color: var(--fourth-color);
+}
