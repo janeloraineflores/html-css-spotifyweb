@@ -23,7 +23,7 @@
 
 aside{
     width: 200px;
-    min-height: 400px;
+    max-height: 100%;
     overflow: hidden;
     flex-direction: column;
     padding: 0 .625rem;
@@ -33,7 +33,6 @@ aside{
     width: 120px;
     padding: 1.25rem 0;
 }
-
 
 
 .playlist-container{
@@ -54,7 +53,7 @@ aside{
 
 .playlist-container ul{
     overflow-y: auto;
-    height: 80%;
+    flex-grow: 1;
 }
 
 aside a {
@@ -83,9 +82,16 @@ main header {
     position: fixed;
     top: 0;
     right: 0;
-    background-color:rgba(0, 0, 0, 0.41);
+    z-index: 1;
+    background-color:rgba(0, 0, 0, 0.536);
     text-align: right;
     padding: 1.25rem;
+}
+
+main header *{
+    border: 1px solid white;
+    padding: .625rem 1.875rem;
+    border-radius: 1.25rem;
 }
 
 
@@ -93,8 +99,18 @@ main header {
 
 main section {
     overflow-y: auto;
-    height: 100%;
-    padding-top: 5rem;
+    height: 90%;
+    padding-top: 6.25rem;
+}
+
+main h3{
+    font-size: 1.5em;
+    padding: 1.875rem 0;
+}
+
+main p{
+    margin-top: .625rem;
+    font-size: .75rem;
 }
 
 .container{
@@ -111,6 +127,23 @@ main section {
    padding: .3125rem .625rem;
 }
 
+.cover-container img{
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+
+.song h5,
+.song h6{
+    text-align: center;
+    margin-top: .625rem;
+}
+
+.song h6{
+    font-size: .6875rem;
+}
+
 .container .cards{
     margin: 0 -0.625rem;
 }
@@ -120,6 +153,13 @@ main section {
     width: calc((100% / 6) - 20px);
     margin: 0 .625rem;
 }
+
+
+.rounded img{
+    border-radius: 50%;
+}
+
+
 
 
 
@@ -133,6 +173,8 @@ main section {
 footer{
     height: 100px;
     justify-content: space-between;
+    align-items: center;
+    background-color: rgb(55, 54, 54);
     position: relative;
 }
 
@@ -141,8 +183,40 @@ footer > *{
 }
 
 
+.image-footer img{
+    width: 50px;
+    height: 50px;
+
+}
 
 
+.left-footer{
+    align-items: center;
+}
+
+.left-footer > div:not(:first-child){
+    margin: .625rem;
+}
+
+
+.left-footer a{
+    display: block;
+    padding: .3125rem 0;
+}
+
+.center-footer-top *{
+    padding: .3125rem .4375rem;
+    font-size: 1.3em;
+}
+
+.center-footer-top .icon-bigger{
+    font-size: 2em;
+}
+
+.right-footer *{
+    font-size: 1em;
+    padding: 0 .3125rem;
+}
 
 
 /*
@@ -195,41 +269,4 @@ footer > *{
 
 
 
-/*
-----------------------
-    DEBUG
-----------------------
-*/
-
-.debug .main-content{
-    background-color: lightblue;
-}
-
-.debug footer{
-    background-color: aquamarine;
-}
-
-.debug .main-content,
-.debug footer,
-aside,
-main{
-    border: 3px dashed red;
-}
-
-
-.debug main{
-    background-color: brown;
-}
-
-.debug footer > *{
-    background-color: lightpink;
-}
-
-.debug .card{
-    border: 3px dashed blue;
-}
-
-.debug .cards{
-    border: 3px dashed orange;
-}
 
