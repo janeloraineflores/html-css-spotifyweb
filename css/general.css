@@ -2,6 +2,7 @@
 
 *{
     font-family: 'Montserrat', sans-serif;
+    font-size: 13px;
 }
 
 .flex{
@@ -16,5 +17,4 @@ ul {
 a{
     text-decoration: none;
     display: inline-block;
-    color: white;
 }

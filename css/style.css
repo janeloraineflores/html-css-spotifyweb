@@ -11,8 +11,8 @@
 
 .main-content{
   height: calc(100vh - 100px);
+  overflow: hidden;
 }
-
 
 
 /*
@@ -23,28 +23,34 @@
 
 aside{
     width: 200px;
-    position: relative;
     min-height: 400px;
     overflow: hidden;
-    display: flex;
     flex-direction: column;
+    padding: 0 .625rem;
 }
 
 .logo-container{
-    padding: 1.25rem;
+    width: 120px;
+    padding: 1.25rem 0;
 }
 
-.user-info-container{
-    width: 100%;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-}
+
 
 .playlist-container{
+    margin-top: 1.25rem;
     flex-grow: 1;
     overflow: hidden;
 }
+
+
+.playlist-container button{
+    width: 30px;
+    height: 30px;
+    font-size: 2em;
+    line-height: 1.25rem;
+    font-weight: bold;
+}
+
 
 .playlist-container ul{
     overflow-y: auto;
@@ -55,8 +61,6 @@ aside a {
     display: inline-block;
     padding: .625rem .3125rem
 }
-
-
 
 
 
@@ -116,6 +120,7 @@ main section {
     width: calc((100% / 6) - 20px);
     margin: 0 .625rem;
 }
+
 
 
 /* 
@@ -190,11 +195,6 @@ footer > *{
 
 
 
-
-
-
-
-
 /*
 ----------------------
     DEBUG
@@ -216,9 +216,6 @@ main{
     border: 3px dashed red;
 }
 
-.debug aside{
-    background-color: blueviolet;
-}
 
 .debug main{
     background-color: brown;
@@ -236,6 +233,3 @@ main{
     border: 3px dashed orange;
 }
 
-.debug .user-info-container {
-    background-color: darkgoldenrod;
-}
