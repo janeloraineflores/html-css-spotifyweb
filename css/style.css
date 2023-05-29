@@ -2,3 +2,240 @@
 @import "general.css";
 @import "colors.css";
 
+
+/*
+---------------------
+    MAIN CONTENT
+--------------------
+*/
+
+.main-content{
+  height: calc(100vh - 100px);
+}
+
+
+
+/*
+-----------------
+      ASIDE
+------------------
+*/
+
+aside{
+    width: 200px;
+    position: relative;
+    min-height: 400px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.logo-container{
+    padding: 1.25rem;
+}
+
+.user-info-container{
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.playlist-container{
+    flex-grow: 1;
+    overflow: hidden;
+}
+
+.playlist-container ul{
+    overflow-y: auto;
+    height: 80%;
+}
+
+aside a {
+    display: inline-block;
+    padding: .625rem .3125rem
+}
+
+
+
+
+
+
+/*
+-----------------
+    MAIN
+-----------------
+*/
+
+main,
+header{
+    width: calc(100% - 200px);
+}
+
+
+/* main header */
+
+main header {
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-color:rgba(0, 0, 0, 0.41);
+    text-align: right;
+    padding: 1.25rem;
+}
+
+
+/* main section */
+
+main section {
+    overflow-y: auto;
+    height: 100%;
+    padding-top: 5rem;
+}
+
+.container{
+    width: 100%;
+    padding: 0 .625rem;
+}
+
+
+.container nav ul {
+    justify-content: center;
+}
+
+.container nav ul li {
+   padding: .3125rem .625rem;
+}
+
+.container .cards{
+    margin: 0 -0.625rem;
+}
+
+
+.container .cards .card{
+    width: calc((100% / 6) - 20px);
+    margin: 0 .625rem;
+}
+
+
+/* 
+------------------------
+    FOOTER
+------------------------
+*/
+
+
+footer{
+    height: 100px;
+    justify-content: space-between;
+    position: relative;
+}
+
+footer > *{
+    padding: 1.25rem;
+}
+
+
+
+
+
+
+/*
+----------------------------
+         RESPONSIVE
+-----------------------------
+*/
+
+/* Tablet -> fino a 1100px */
+
+@media screen and (max-width: 1100px) {
+
+ .container .cards .card{
+    width: calc((100% / 4) - 20px);
+  }
+
+}
+
+
+
+/* Mobile normale -> fino a 700px */
+
+@media screen and (max-width: 700px) {
+
+    .container .cards .card{
+        width: calc((100% / 2) - 20px);
+      }
+}
+
+
+
+
+/* Mobile piccolo -> fino a 600px */
+
+@media screen and (max-width: 600px) {
+
+    main,
+    header{
+        width: calc(100% - 80px);
+    }
+
+    aside {
+        width: 80px;
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+/*
+----------------------
+    DEBUG
+----------------------
+*/
+
+.debug .main-content{
+    background-color: lightblue;
+}
+
+.debug footer{
+    background-color: aquamarine;
+}
+
+.debug .main-content,
+.debug footer,
+aside,
+main{
+    border: 3px dashed red;
+}
+
+.debug aside{
+    background-color: blueviolet;
+}
+
+.debug main{
+    background-color: brown;
+}
+
+.debug footer > *{
+    background-color: lightpink;
+}
+
+.debug .card{
+    border: 3px dashed blue;
+}
+
+.debug .cards{
+    border: 3px dashed orange;
+}
+
+.debug .user-info-container {
+    background-color: darkgoldenrod;
+}
