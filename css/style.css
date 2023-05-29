@@ -25,9 +25,11 @@ aside{
     width: 200px;
     max-height: 100%;
     overflow: hidden;
+    display: flex;
     flex-direction: column;
     padding: 0 .625rem;
 }
+
 
 .logo-container{
     width: 120px;
@@ -53,14 +55,13 @@ aside{
 
 .playlist-container ul{
     overflow-y: auto;
-    flex-grow: 1;
+    height: 80%;
 }
 
 aside a {
     display: inline-block;
     padding: .625rem .3125rem
 }
-
 
 
 
@@ -127,12 +128,36 @@ main p{
    padding: .3125rem .625rem;
 }
 
-.cover-container img{
-    width: 100%;
-    height: 100%;
+.cover-container{
     position: relative;
 }
 
+.cover-container img{
+    width: 100%;
+    height: 100%;
+}
+
+.cover-container .overlay{
+    width: 200px;
+    height: 200px;
+    background-color: rgba(0, 0, 0, 0.296);
+    position: absolute;
+    top: 0;
+    display: none;
+}
+
+
+.overlay > div{
+    font-size: 3em;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.cover-container:hover .overlay{
+    display: block;
+}
 
 .song h5,
 .song h6{
@@ -171,6 +196,7 @@ main p{
 
 
 footer{
+    width: 100%;
     height: 100px;
     justify-content: space-between;
     align-items: center;
@@ -204,13 +230,17 @@ footer > *{
     padding: .3125rem 0;
 }
 
+.center-footer *{
+    text-align: center;
+}
+
 .center-footer-top *{
     padding: .3125rem .4375rem;
     font-size: 1.3em;
 }
 
 .center-footer-top .icon-bigger{
-    font-size: 2em;
+    font-size: 1.5em;
 }
 
 .right-footer *{
@@ -218,6 +248,52 @@ footer > *{
     padding: 0 .3125rem;
 }
 
+.center-footer-bottom span{
+    font-size: 10px;
+}
+
+.progress-container{
+    display: inline-block;
+    margin-top: 1.875rem;
+    margin-left: .625rem;
+    margin-right: .625rem;
+    width: 400px;
+    height: 10px;
+    border-radius: 50px;
+    background-color: rgba(211, 211, 211, 0.322);
+}
+
+.progress-container .progress{
+    width: 100px;
+    height: 100%;    
+    background-color: rgb(255, 255, 255);
+}
+
+
+.second-progress-container{
+    display: inline-block;
+    margin-top: 1.875rem;
+    margin-left: .625rem;
+    margin-right: .625rem;
+    width: 100px;
+    height: 10px;
+    border-radius: 50px;
+    background-color: rgba(211, 211, 211, 0.322);
+}
+
+.second-progress-container .second-progress{
+    width: 20px;
+    height: 100%;    
+    background-color: rgb(255, 255, 255);
+}
+
+.progress:hover{
+    background-color: greenyellow;
+}
+
+.second-progress:hover{
+    background-color: greenyellow;
+}
 
 /*
 ----------------------------
@@ -260,6 +336,10 @@ footer > *{
 
     aside {
         width: 80px;
+    }
+
+    aside *{
+        display: none;
     }
 
 }
